@@ -1,0 +1,9 @@
+.outside-grid{
+    width:1200px;
+    height:1000px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    align-content:center;
+
+    
+}

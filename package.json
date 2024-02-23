@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "clsx": "^2.1.0",
+    "react-router-dom": "^6.22.1",
+    "tailwind-merge": "^2.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.20"
+  }
+}
