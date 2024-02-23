@@ -1,0 +1,52 @@
+/* Apply to all input elements */
+input::placeholder {
+  text-align: center;
+}
+#tag {
+  text-align: center;
+}
+
+body {
+  background-color: #f9f3cc; /* Replace with your desired background color */
+  margin: 0; /* Remove default body margin */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+  width: 1000px;
+  height: 430px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+.left-grid {
+  display: grid;
+  padding: 5%;
+}
+
+.title-box {
+  border-radius: 15px;
+  border: 1px solid black;
+}
+.right-grid {
+  display: grid;
+  padding: 5%;
+  gap: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.upload-button {
+  background-color: #d7e5ca;
+  width: 210px;
+}
+
+.cancel-button {
+  border: 1px solid black;
+  background-color: white;
+  width: 210px;
+}
