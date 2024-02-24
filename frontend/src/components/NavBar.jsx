@@ -1,6 +1,7 @@
 import React from 'react';
 import "../components/css/NavBar.css"
 import travel from "../../public/images/travel.png"
+import globeImage from "../../public/images/earth.png"
 
 export default function NavBar(){
     return(
@@ -13,8 +14,12 @@ export default function NavBar(){
         <div className="tab-wrapper">
             <button className="home">HOME</button>
             <button className="about">ABOUT</button>
-            <button className="login">LOGIN</button>
             <button className="discover">DISCOVER</button>
+            <button className="login">LOGIN</button>
+            <button className="globe">
+                <img src={globeImage} alt ="globe-icon"/>
+            </button>
+            
         </div>
     {/* <div className="logo">
             <img src={travel} alt="logo-icon" />

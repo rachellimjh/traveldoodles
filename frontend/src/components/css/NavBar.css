@@ -1,15 +1,16 @@
 
 .bar-wrapper{
+  width:500px;
     display:grid;
     grid-template-columns: 1fr 1fr;
 }
 
 .tab-wrapper {
     margin-top:50px;
-    width:1000px;
+    width:600px;
     display: flex; /* Use flexbox */
     flex-direction:row;
-    margin-left:250px;
+    margin-left:200px;
   }
   
   .tab-wrapper button {
@@ -20,9 +21,9 @@
     font-size: 16px;
     cursor: pointer;
     display: inline-block;
-    margin-right: 30px; /* Add spacing between the elements */
+    margin-left: 25px; /* Add spacing between the elements */
     margin-top:38px;
-    font-size:20px;
+    font-size:16px;
   }
 
   .tab-wrapper button:hover {background: #eee;}
@@ -56,4 +57,9 @@
   margin-left: 0px;
 }
 
+.globe img{
+  width: 40px;
+  height: 40px;
+  margin-top:3px;
+}
 
