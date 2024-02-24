@@ -1,0 +1,74 @@
+
+  
+  .outer{
+    
+    display:grid;
+    width:100vw;
+    height:100vh;
+  }
+  .bottom-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left:40%;
+    gap: 10px;
+  }
+
+  .pen-adventure-button{
+    width:80%;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .go-button{
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* .outer{
+    width:1000px;
+    height:1000px;
+  } */
+  
+  /* .center-images {
+    display: flex;
+    gap: 25px;
+  }
+  .img-jungledoodles {
+    border-radius: 10%;
+    width: 20vw;
+    height: 20vh;
+  }
+  
+  .img-truffledoodles {
+    border-radius: 10%;
+    width: 20vw;
+    height: 20vh;
+  }
+  
+  .img-snoozerdoodles {
+    border-radius: 10%;
+    width: 20vw;
+    height: 20vh;
+  }
+  
+  .img-wonderdoodles {
+    border-radius: 10%;
+    width: 20vw;
+    height: 20vh;
+  }
+  
+  .img-fitdoodles {
+    border-radius: 10%;
+    width: 20vw;\
+    height: 20vh;
+  }
+  
+  .img-studydoodles {
+    border-radius: 10%;
+    width: 20vw;
+    height: 20vh;
+  }
+  
+  .center-text-box {
+    display: flex;
+    gap: 25px;
+  } */

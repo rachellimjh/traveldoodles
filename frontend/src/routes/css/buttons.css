@@ -1,0 +1,22 @@
+/* buttonStyles.css */
+.custom-button {
+    /* Add your custom button styles here */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000000; /* Example background color */
+    color: white; /* Example text color */
+    border: none; /* Example border styles */
+    padding: 10px 20px; /* Example padding */
+    
+  }
+  
+  .custom-button:hover {
+    background-color: #000000; /* Example hover background color */
+  }
+  
+
+.custom-button:hover {
+    background-color: #E64A19; /* Example hover background color */
+}  
