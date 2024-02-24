@@ -21,9 +21,6 @@ export default function NavBar(){
             </button>
             
         </div>
-    {/* <div className="logo">
-            <img src={travel} alt="logo-icon" />
-          </div> */}
         </div>
     </nav>
 
