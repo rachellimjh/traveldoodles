@@ -1,11 +1,12 @@
 import React from "react";
 import { useState } from "react";
-import "./PostingPage.css";
+import "./css/PostingPage.css";
 import { FileUploader } from "react-drag-drop-files";
 import NavBar from "../components/NavBar";
 import { Base64 } from "js-base64";
 
 export default function PostingPage() {
+  const [data, setData] = useState([]);
   const [post, setPost] = useState({
     title: "",
     description: "",
@@ -17,19 +18,47 @@ export default function PostingPage() {
   });
   const fileTypes = ["JPG", "PNG", "GIF"];
 
-  //component to upload photos
-  const DragDrop = (event) => {
-    const handleChange = (file) => {
-      const url = URL.createObjectURL(file);
-      console.log("URL", url);
-      setPost({ ...post, image: url });
-      //setFile(url);
-      console.log(file);
+  function convertToBase64(e) {
+    console.log(e);
+    var reader = new FileReader();
+    reader.readAsDataURL(e.target.files[0]);
+    reader.onload = () => {
+      console.log(reader.result);
+      setPost({ ...post, image: reader.result });
+      //console.log("check", post.image, "empty");
     };
-    return (
-      <FileUploader handleChange={handleChange} name="file" types={fileTypes} />
-    );
-  };
+    reader.onerror = (error) => {
+      console.log("Error", error);
+    };
+  }
+
+  // function uploadImage(){
+  //   fetch("",{
+  //     method: "POST",
+  //     crossDomain: true,
+  //     headeres:{
+  //       "Content-Type": "application/json"
+  //       Accept: "application/json",
+  //       "Access-Control-Allow-Origin": "*",
+  //     },
+
+  //   })
+  // }
+
+  //component to upload photos
+  // const DragDrop = (event) => {
+  //   const handleChange = (file) => {
+  //     onChange{convertToBase64};
+  //     const url = URL.createObjectURL(file);
+  //     console.log("URL", image);
+  //     setPost({ ...post, image: url });
+  //     //setFile(url);
+  //     console.log(file);
+  //   };
+  //   return (
+  //     <FileUploader handleChange={handleChange} name="file" types={fileTypes} />
+  //   );
+  // };
 
   //   const handleImage = (event) => {
   //     setPost({ ...post, image: event.target.image });
@@ -49,16 +78,16 @@ export default function PostingPage() {
     setPost({ ...post, description: event.target.value });
   };
   const handlePost = async () => {
-    // setData([...data, post])
-    // console.log(post)
-    // try {
-    //   const response = await DatabaseService.addPost(post);
-    //   const response2 = await DatabaseService.getPost();
-    //   setData(response2.data);
-    // } catch (e) {
-    //   console.log(e);
-    // }
-    // //console.log(response.data)
+    setData([...data, post]);
+    console.log(post);
+    try {
+      const response = await DatabaseService.addPost(post);
+      const response2 = await DatabaseService.getPost();
+      setData(response2.data);
+    } catch (e) {
+      console.log(e);
+    }
+    //console.log(response.data)
   };
 
   const handleCancel = (event) => {
@@ -77,10 +106,15 @@ export default function PostingPage() {
             onChange={handleTitle}
             placeholder="Title"
           />
-          {/* <img src="path/to/your/image.jpg" alt="Description of the image"></img> */}
-
-          <DragDrop className="dragdrop-box" />
-          <img alt="not found" width={"100px"} src={post.image} />
+          {/* <DragDrop className="dragdrop-box" />
+          <img alt="not found" width={"100px"} src={post.image} /> */}
+          <div className="auth-wrapper">
+            <div className="auth-inner" style={{ width: "auto" }}>
+              Upload Image
+              <input accepts="image/*" type="file" onChange={convertToBase64} />
+              <img width={100} height={100} src={post.image} />
+            </div>
+          </div>
         </div>
         <div className="right-grid">
           <select name="tag" id="tag" defaultValue="" required>
