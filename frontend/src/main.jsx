@@ -9,6 +9,7 @@ import ExplorePage from "./routes/ExplorePage.jsx"
 import HomePage from "./routes/HomePage.jsx"
 import PostingPage from "./routes/PostingPage.jsx"
 import MapPage from "./routes/MapPage.jsx"
+import AboutPage from "./routes/AboutPage.jsx"
 import {
   createBrowserRouter,
   createHashRouter,
@@ -49,9 +50,13 @@ const router = createBrowserRouter([
     element:<MapPage/>,
     errorElement:<ErrorPage />,
 
-  }
-]
-);
+  },
+  {
+    path:"/aboutPage",
+    element:<AboutPage/>,
+    errorElement:<ErrorPage />,
+  },
+]);
 
 
 

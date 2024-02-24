@@ -1,76 +1,76 @@
 /* Apply to all input elements */
 input::placeholder {
-    text-align: center;
-  }
-  #tag {
-    text-align: center;
-  }
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+}
+#tag {
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+  width: 1000px;
+  height: 430px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+.left-grid {
+  display: grid;
+  padding: 5%;
+}
+
+.title-box {
+  border-radius: 20px;
+  border: 1px solid black;
+  height: 55px;
+  /* font-family: "JetBrains Mono"; */
+}
+.image-box {
+  display: grid;
+  align-items: last baseline;
+}
+
+.right-grid {
   
-  body {
-    background-color: #f9f3cc!important; /* Replace with your desired background color */
-    margin: 0; /* Remove default body margin */
-  }
-  
-  .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: white;
-    width: 1000px;
-    height: 430px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-  }
-  .left-grid {
-    display: grid;
-    padding: 5%;
-  }
-  
-  .title-box {
-    border-radius: 20px;
-    border: 1px solid black;
-    height: 55px;
-    /* font-family: "JetBrains Mono"; */
-  }
-  .image-box {
-    display: grid;
-    align-items: last baseline;
-  }
-  
-  .right-grid {
-    display: grid;
-    padding: 5%;
-    gap: 10px;
-  }
-  
-  #tag {
-    border-radius: 15px;
-  }
-  .location-box {
-    border-radius: 15px;
-    border: 1px solid black;
-  }
-  .date-box {
-    border-radius: 15px;
-    border: 1px solid black;
-  }
-  .description-box {
-    border-radius: 15px;
-    border: 1px solid black;
-  }
-  .buttons {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .upload-button {
-    background-color: #d7e5ca;
-    width: 210px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-  }
-  
-  .cancel-button {
-    border: 1px solid black;
-    background-color: white;
-    width: 210px;
-  }
+  display: grid;
+  padding: 5%;
+  gap: 10px;
+}
+
+#tag {
+  font-family: 'JetBrains Mono', monospace;
+  border-radius: 15px;
+}
+.location-box {
+  border-radius: 15px;
+  border: 1px solid black;
+}
+.date-box {
+  border-radius: 15px;
+  border: 1px solid black;
+}
+.description-box {
+  border-radius: 15px;
+  border: 1px solid black;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.upload-button {
+  background-color: #d7e5ca;
+  width: 210px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.cancel-button {
+  border: 1px solid black;
+  background-color: white;
+  width: 210px;
+  font-family: 'JetBrains Mono', monospace;
+}

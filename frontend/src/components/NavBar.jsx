@@ -19,7 +19,7 @@ export default function NavBar(){
            
             <div className="navbar-btns">
                 <Link to={"/"}><button className="home">HOME</button></Link>
-                <button className="about">ABOUT</button>
+                <Link to={"/aboutPage"}><button className="about" >ABOUT</button></Link>
                 <Link to={"/login"}> <button className="login">LOGIN</button></Link>
                 <Link to={"/explorePage"}><button className="discover">DISCOVER</button></Link>
                 <Link to={"/mapPage"}><button className="globe">

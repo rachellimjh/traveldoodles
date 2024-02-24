@@ -1,15 +1,17 @@
 
-body{
-  /* overflow:hidden; */
-  background-color: plum;
-}
+/* body{
+  /* overflow:hidden; 
+ 
+} */
 
 
 .half-image-container {
+  font-family: 'JetBrains Mono', monospace;
   display: flex;
 }
 
 .other-half {
+  font-family: 'JetBrains Mono', monospace;
   flex:1;
   padding-top:15%;
   
@@ -31,6 +33,7 @@ body{
 
 
 .inputs{
+  font-family: 'JetBrains Mono', monospace;
   display:flex;
   flex-direction:column;
   gap:5px;
@@ -39,7 +42,8 @@ body{
 
 
 .email-btn{
-  width:28%;
+  font-family: 'JetBrains Mono', monospace;
+  width:35%;
   display: block;
   margin: 0 auto;
   background-color: #000000; 
@@ -51,8 +55,8 @@ body{
 }
 
 .gmail-btn{
-
-  width:28%;
+  font-family: 'JetBrains Mono', monospace;
+  width:35%;
   display: block;
   margin: 0 auto;
   background-color: #000000; 

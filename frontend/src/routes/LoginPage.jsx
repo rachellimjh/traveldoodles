@@ -18,8 +18,8 @@ export default function LoginPage(){
   }
 
   return(
-
-    <div className="half-image-container">
+    //D7E5CA
+    <div className="half-image-container" style={{ backgroundColor: '#F9F3CC' }}>
       <div className="nav">
         <NavBar />
       </div>

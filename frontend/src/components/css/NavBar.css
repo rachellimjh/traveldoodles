@@ -89,12 +89,14 @@
 } */
 
 .navbar-btns{
+  font-family: 'JetBrains Mono', monospace;
   justify-content: space-evenly;
   width: 60%;
   height: 40%;
 }
 
 .navbar-btns button {
+  font-family: 'JetBrains Mono', monospace;
   width: 15%; /* Set the width of each button to 20% */
   /* Add additional styles for buttons if needed */
   height:10%;
@@ -122,6 +124,7 @@
 }
 
 .traveldoodles-wrapper{
+  font-family: 'JetBrains Mono', monospace;
   display: flex;
   align-items:center;
 }

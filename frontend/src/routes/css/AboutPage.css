@@ -1,0 +1,17 @@
+.outer{
+    display:flex;
+    
+}
+
+.about-wrapper{
+    flex:1;
+    padding:15%;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.tags{
+    flex:1;
+    padding:15%;
+    padding-left:5%;
+    font-family: 'JetBrains Mono', monospace;
+}

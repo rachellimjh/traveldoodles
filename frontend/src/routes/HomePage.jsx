@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../routes/css/HomePage.css"
 import NavBar from "../components/NavBar";
-import BgImage from "../../public/images/home-page-background.jpg";
+import backgroundImage from "../../public/images/home-page-background.jpg";
 
 export default function PostingPage() {
   const handleGoButtonClick = () => {
@@ -13,8 +13,13 @@ export default function PostingPage() {
   };
 
   return (
-   
-    <div className="page-wrapper" style={{ backgroundImage: `url(${BgImage})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+    
+    <div className="outer" style={{
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }}>
       <NavBar />
       <div className="bottom-buttons">
         <button className="pen-adventure-button">YOUR NEW ADVENTURE</button>

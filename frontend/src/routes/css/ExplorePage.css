@@ -1,18 +1,31 @@
 .wrapper {
+  font-family: 'JetBrains Mono', monospace;
     display:flex;
     display: grid;
     grid-template-columns: auto auto auto;
     padding-top: 150px;
+    width:100vw;
+    height:auto;
     
   }
 
 
 
 .blog {
+  font-family: 'JetBrains Mono', monospace;
     flex: 1 0 calc(33.33% - 10px); 
     margin: 20px; 
     width: 300px; 
     height: 200px; 
 
 
+
   }
+
+  .fitimage {
+    width: 100%; /* Ensure the image fills the entire width of the button */
+    height: 70%; /* Ensure the image fills the entire height of the button */
+    object-fit: cover; /* Fit the image inside the button while preserving its aspect ratio */
+  }
+
+  
