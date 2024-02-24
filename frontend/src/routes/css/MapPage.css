@@ -1,0 +1,33 @@
+.navbar {
+    width: 100%;
+    height: 30%;
+  }
+  
+  .content {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    margin-top: 5%;
+  }
+  
+  .map-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .pin {
+    position: absolute;
+  }
+  
+  .pin-image {
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+  }
+  
+  /* MapPage.css */
+
+.undo-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }

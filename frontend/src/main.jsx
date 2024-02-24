@@ -8,6 +8,7 @@ import ProfilePage from "./routes/ProfilePage.jsx"
 import ExplorePage from "./routes/ExplorePage.jsx"
 import HomePage from "./routes/HomePage.jsx"
 import PostingPage from "./routes/PostingPage.jsx"
+import MapPage from "./routes/MapPage.jsx"
 import {
   createBrowserRouter,
   createHashRouter,
@@ -42,6 +43,12 @@ const router = createBrowserRouter([
     path:"/profilePage",
     element:<ProfilePage/>,
     errorElement:<ErrorPage />,
+  },
+  {
+    path:"/mapPage",
+    element:<MapPage/>,
+    errorElement:<ErrorPage />,
+
   }
 ]
 );

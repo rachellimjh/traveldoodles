@@ -22,9 +22,9 @@ export default function NavBar(){
                 <button className="about">ABOUT</button>
                 <Link to={"/login"}> <button className="login">LOGIN</button></Link>
                 <Link to={"/explorePage"}><button className="discover">DISCOVER</button></Link>
-                <button className="globe">
+                <Link to={"/mapPage"}><button className="globe">
                     <img src={globeImage} alt ="globe-icon"/> 
-                </button>
+                </button></Link>
             </div>
         </div>
     )
