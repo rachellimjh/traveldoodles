@@ -18,7 +18,7 @@ export default function NavBar(){
             </ div>
            
             <div className="navbar-btns">
-                <Link to={"/"}><button className="home">HOME</button></Link>
+                <Link to={"/Home"}><button className="home">HOME</button></Link>
                 <Link to={"/aboutPage"}><button className="about" >ABOUT</button></Link>
                 <Link to={"/"}> <button className="login">LOGOUT</button></Link>
                 <Link to={"/explorePage"}><button className="discover">DISCOVER</button></Link>
