@@ -18,10 +18,10 @@ export default function NavBar(){
             </ div>
            
             <div className="navbar-btns">
-                <button className="home">HOME</button>
+                <Link to={"/"}><button className="home">HOME</button></Link>
                 <button className="about">ABOUT</button>
-                <button className="discover">DISCOVER</button>
-                <button className="login">LOGIN</button>
+                <Link to={"/login"}> <button className="login">LOGIN</button></Link>
+                <Link to={"/explorePage"}><button className="discover">DISCOVER</button></Link>
                 <button className="globe">
                     <img src={globeImage} alt ="globe-icon"/> 
                 </button>

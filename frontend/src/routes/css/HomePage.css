@@ -1,0 +1,58 @@
+/* body {
+    background-image: url("../../public/images/home-page-background.jpg");
+    background-size: cover;
+    background-position: center; 
+  } */
+  
+  .bottom-buttons {
+    display: flex;
+  
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* .center-images {
+    display: flex;
+    gap: 25px;
+  }
+  .img-jungledoodles {
+    border-radius: 10%;
+    width: 20vw;
+    height: 20vh;
+  }
+  
+  .img-truffledoodles {
+    border-radius: 10%;
+    width: 20vw;
+    height: 20vh;
+  }
+  
+  .img-snoozerdoodles {
+    border-radius: 10%;
+    width: 20vw;
+    height: 20vh;
+  }
+  
+  .img-wonderdoodles {
+    border-radius: 10%;
+    width: 20vw;
+    height: 20vh;
+  }
+  
+  .img-fitdoodles {
+    border-radius: 10%;
+    width: 20vw;\
+    height: 20vh;
+  }
+  
+  .img-studydoodles {
+    border-radius: 10%;
+    width: 20vw;
+    height: 20vh;
+  }
+  
+  .center-text-box {
+    display: flex;
+    gap: 25px;
+  } */

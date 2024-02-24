@@ -5,7 +5,9 @@ import './index.css'
 import LoginPage from "./routes/LoginPage.jsx"
 import ErrorPage from './routes/ErrorPage.jsx'
 import ProfilePage from "./routes/ProfilePage.jsx"
-
+import ExplorePage from "./routes/ExplorePage.jsx"
+import HomePage from "./routes/HomePage.jsx"
+import PostingPage from "./routes/PostingPage.jsx"
 import {
   createBrowserRouter,
   createHashRouter,
@@ -14,15 +16,33 @@ import {
 
 
 
-
-
-const router = createHashRouter([
-  
+const router = createBrowserRouter([
   {
-    path:"/",
-    element:<LoginPage/>,
-    errorElement:<ErrorPage/>,
+     path:"/",
+     element:<HomePage />,
+     errorElement:<ErrorPage />,
   },
+  {
+    path:"/login",
+    element:<LoginPage />,
+    errorElement:<ErrorPage />,
+  },
+  {
+    path:"/explorePage",
+    element:<ExplorePage/>,
+    errorElement:<ErrorPage />,
+  },
+
+  {
+    path:"/postingPage",
+    element:<PostingPage/>,
+    errorElement:<ErrorPage />,
+  },
+  {
+    path:"/profilePage",
+    element:<ProfilePage/>,
+    errorElement:<ErrorPage />,
+  }
 ]
 );
 

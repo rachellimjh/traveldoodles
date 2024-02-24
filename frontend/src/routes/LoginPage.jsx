@@ -29,7 +29,7 @@ export default function LoginPage(){
       </div>
       <div className="other-half">
         <div className="text-content">
-        <h3>CERATE AN ACCOUNT</h3>
+        <h3>CREATE AN ACCOUNT</h3>
         <p>enter your email below to create an account</p>
         </div>
 
