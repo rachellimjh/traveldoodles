@@ -1,4 +1,4 @@
-
+/* 
 .bar-wrapper{
   position: fixed;
   top: 0;
@@ -9,7 +9,7 @@
 .tab-wrapper {
     margin-top:50px;
     width:600px;
-    display: flex; /* Use flexbox */
+    display: flex; 
     flex-direction:row;
     margin-left:200px;
   }
@@ -22,7 +22,7 @@
     font-size: 16px;
     cursor: pointer;
     display: inline-block;
-    margin-left: 10px; /* Add spacing between the elements */
+    margin-left: 10px; 
     margin-top:38px;
     font-size:16px;
   }
@@ -30,7 +30,7 @@
   .tab-wrapper button:hover {background: #eee;}
   
 .traveldoods{
-    display: flex; /* Use flexbox */
+    display: flex; /
     flex-direction:row;
     margin-left:100px;
     width:500px;
@@ -62,5 +62,82 @@
   width: 40px;
   height: 40px;
   margin-top:3px;
+} */
+
+.navbar-wrapper{
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+
+ 
 }
 
+/* .websitename{
+  width:35%;
+} */
+
+.navbar-btns {
+  width: 60%;
+  height: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items:center;
+}
+
+.navbar-btns button {
+  width: 15%; /* Set the width of each button to 20% */
+  /* Add additional styles for buttons if needed */
+  height:10%;
+  margin: 0 0px;
+  border: none;
+  background-color: inherit;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+
+.globe img{
+  width: 40px;
+  height: 40px;
+  margin-top:3px;
+}
+
+.globe{
+  width:20%;
+  height:20%
+}
+
+.traveldoodles-wrapper{
+  display: flex;
+  align-items:center;
+}
+
+ .logo{
+  width:35%;
+  height:auto;
+  display:flex;
+  justify-content: flex-end;
+}
+
+.traveldoodles-wrapper .websitename{
+  width:20%;
+}
+
+.logo img{
+  width:40%;
+  height:auto;
+}
+
+
+
+
+
+
+
+  
