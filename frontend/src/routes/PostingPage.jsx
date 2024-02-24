@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "./PostingPage.css";
+import { FileUploader } from "react-drag-drop-files";
 
 export default function PostingPage() {
   const [post, setPost] = useState({
@@ -12,9 +13,29 @@ export default function PostingPage() {
     location: "",
     type: "",
   });
+  const fileTypes = ["JPG", "PNG", "GIF"];
 
+  //component to upload photos
+  const DragDrop = (event) => {
+    const handleChange = (file) => {
+      const url = URL.createObjectURL(file);
+      console.log("URL", url);
+      setPost({ ...post, image: url });
+      //setFile(url);
+      console.log(file);
+    };
+    return (
+      <FileUploader handleChange={handleChange} name="file" types={fileTypes} />
+    );
+  };
+
+  //   const handleImage = (event) => {
+  //     setPost({ ...post, image: event.target.image });
+  //     console.log(event.target.image);
+  //   };
   const handleTitle = (event) => {
     setPost({ ...post, title: event.target.value });
+    //console.log("Title changed:", event.target.value);
   };
   const handleLocation = (event) => {
     setPost({ ...post, location: event.target.value });
@@ -41,6 +62,7 @@ export default function PostingPage() {
   const handleCancel = (event) => {
     //go back to previous page
   };
+
   return (
     <div className="grid-container">
       <div className="left-grid">
@@ -50,11 +72,13 @@ export default function PostingPage() {
           placeholder="Title"
         />
         {/* <img src="path/to/your/image.jpg" alt="Description of the image"></img> */}
-        {/* <>imageFromDesktop</> */}
+
+        <DragDrop className="dragdrop-box" />
+        <img alt="not found" width={"100px"} src={post.image} />
       </div>
       <div className="right-grid">
-        <select name="tag" id="tag">
-          <option value="" disabled selected hidden>
+        <select name="tag" id="tag" defaultValue="" required>
+          <option value="" disabled hidden>
             Tag
           </option>
           <option value="truffleDoodles">TruffleDoodles</option>

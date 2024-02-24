@@ -26,15 +26,37 @@ body {
 }
 
 .title-box {
-  border-radius: 15px;
+  border-radius: 20px;
   border: 1px solid black;
+  height: 55px;
+  /* font-family: "JetBrains Mono"; */
 }
+.image-box {
+  display: grid;
+  align-items: last baseline;
+}
+
 .right-grid {
   display: grid;
   padding: 5%;
   gap: 10px;
 }
 
+#tag {
+  border-radius: 15px;
+}
+.location-box {
+  border-radius: 15px;
+  border: 1px solid black;
+}
+.date-box {
+  border-radius: 15px;
+  border: 1px solid black;
+}
+.description-box {
+  border-radius: 15px;
+  border: 1px solid black;
+}
 .buttons {
   display: flex;
   justify-content: space-between;
@@ -43,6 +65,8 @@ body {
 .upload-button {
   background-color: #d7e5ca;
   width: 210px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
 }
 
 .cancel-button {
