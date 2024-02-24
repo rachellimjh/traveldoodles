@@ -11,7 +11,7 @@ import PostingPage from "./routes/PostingPage.jsx"
 import MapPage from "./routes/MapPage.jsx"
 import AboutPage from "./routes/AboutPage.jsx"
 import AuthLayout from './layouts/AuthLayout.jsx'
-import PublicLayout from './layouts/publicLayout.jsx'
+import PublicLayout from './layouts/PublicLayout.jsx'
 import ProtectedLayout from './layouts/protectedLayout.jsx'
 import {
   createBrowserRouter,
