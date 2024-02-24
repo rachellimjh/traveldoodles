@@ -1,28 +1,89 @@
-
 import React, { useState } from 'react';
 import "../routes/css/LoginPage.css";
 import LoginImage from "../../public/images/login.jpg"
 import newImage from "../../public/images/new.png"
 import NavBar from "../components/NavBar.jsx"
+import { useAuth } from "../hooks/AuthProvider";
+import DatabaseService from "../api/databaseService";
+import { useGoogleLogin } from "@react-oauth/google";
+import GoogleAPIService from "../api/googleAPIService";
+import { useNavigate, Link} from 'react-router-dom';
 
 
-export default function LoginPage(){
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const handleChange = (event) => {
-    setEmail(event.target.value);
+export default function LoginPage() {
+  const [userInput, setUserInput] = useState({
+      username: "",
+      password: "",
+      groupID: [],
+      posts: []
+  });
+  const [data, setData] = useState([]);
+  const { user, logout, login} = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogin = () =>{
+    login({name:"test"})
   }
-  
-  const handleLogin = (event) => {
-    setPassword(event.target.value);
-  }
+
+  const handleSignup = async () => {
+      try {
+          login({ name: userInput.username });
+
+          const newData = [...data, userInput];
+          setData(newData);
+
+          const response = await DatabaseService.addUser(userInput);
+          console.log("User added:", response.data);
+
+          const response2 = await DatabaseService.getUser(); 
+          setUserInput(response2.data);
+
+          console.log("Signup successful");
+
+          navigate('/Home'); // Use navigate function to redirect to the Home page
+
+      } catch(e) {
+          console.log("Signup error:", e);
+      }
+  };
+
+  const googleLogin = useGoogleLogin({
+      onSuccess: async (tokenResponse) => {
+          try {
+              const response = await GoogleAPIService.getGoogleData(tokenResponse);
+              console.log(response);
+
+              const name = response.data.name;
+
+              login({ name });
+
+              const defaultPassword = "defaultPassword";
+
+              const response2 = await DatabaseService.addUser({ username: name, password: defaultPassword });
+              console.log("User added:", response2.data);
+
+              setData([...data, name]);
+
+              const response3 = await DatabaseService.getUser();
+              setUserInput(response3.data);
+
+              navigate('/Home');
+
+          } catch (e) {
+              console.log("Error:", e);
+          }
+      },
+      onError: () => {
+          console.log("Error occurred during Google login");
+      },
+  });
 
   return(
     //D7E5CA
     <div className="half-image-container" style={{ backgroundColor: '#F9F3CC' }}>
-      <div className="nav">
+      {/* <div className="nav">
         <NavBar />
-      </div>
+      </div> */}
     
       <div className="image-container">
         <img src={LoginImage} alt="Image" />
@@ -39,8 +100,8 @@ export default function LoginPage(){
           <input
             type="email"
             id="email"
-            value={email}
-            onChange={handleChange}
+            value={userInput.username}
+            onChange={(event) => setUserInput({...userInput, username: event.target.value})}
             placeholder="name@example"
           />
           </div>
@@ -50,17 +111,17 @@ export default function LoginPage(){
                <input className="password-box"
                 type="password"
                 id="password"
-                value={password}
-                onChange={handleLogin}
+                value={userInput.password}
+                onChange={(event) => setUserInput({...userInput, password: event.target.value})}
                 placeholder="password"
                />
           </div>
         
-        <button className="email-btn">
+        <button onClick={handleSignup} className="email-btn">
           sign in with email
         </button>
         <p className="contwith"> or continue with </p>
-        <button className="gmail-btn">
+        <button className="gmail-btn" onClick={googleLogin}>
           Gmail
         </button>
         

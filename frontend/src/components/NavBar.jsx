@@ -20,7 +20,7 @@ export default function NavBar(){
             <div className="navbar-btns">
                 <Link to={"/"}><button className="home">HOME</button></Link>
                 <Link to={"/aboutPage"}><button className="about" >ABOUT</button></Link>
-                <Link to={"/login"}> <button className="login">LOGIN</button></Link>
+                <Link to={"/"}> <button className="login">LOGOUT</button></Link>
                 <Link to={"/explorePage"}><button className="discover">DISCOVER</button></Link>
                 <Link to={"/mapPage"}><button className="globe">
                     <img src={globeImage} alt ="globe-icon"/> 
