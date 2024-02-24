@@ -1,4 +1,108 @@
- .outside-grid{
+
+body{
+  overflow:hidden;
+}
+
+
+.half-image-container {
+  display: flex;
+}
+
+.other-half {
+  flex:1;
+  padding-top:15%;
+  
+  
+}
+
+
+
+.image-container {
+  flex: 1;
+   /* Take up half of the container's width */
+   overflow: hidden;
+}
+
+.image-container img {
+  width: 100%; /* Ensure the image fills its container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
+.inputs{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+
+}
+
+
+.email-btn{
+  width:28%;
+  display: block;
+  margin: 0 auto;
+  background-color: #000000; 
+  color: white;
+  
+}
+.email-btn:hover {
+  background-color: #8EACCD;
+}
+
+.gmail-btn{
+
+  width:28%;
+  display: block;
+  margin: 0 auto;
+  background-color: #000000; 
+  color: white;
+}
+
+.gmail-btn:hover {
+  background-color: #8EACCD;
+}
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /* .outside-grid{
     width: 1200px;
     height:900px;
     display:grid;
@@ -9,7 +113,6 @@
 
 .loginWrapper{
     height:600px;
-    /* align-content:center; */
     gap:30px;
     margin-top:300px;
     margin-bottom:auto
@@ -27,24 +130,24 @@
   }
 
 .email-input {
-    margin-bottom: 10px; /* Adjust margin as needed */
+    margin-bottom: 10px; 
     margin-top:10px;
     margin-left: 10px;
     font-family: 'JetBrains Mono', monospace;
   }
   
   .email-field {
-    margin-bottom: 20px; /* Adjust margin as needed */
+    margin-bottom: 20px; 
     margin-right:10px;
     font-family: 'JetBrains Mono', monospace;
   }
   .test {
     display: flex;
-    justify-content: flex-left; /* Align items to the end */
+    justify-content: flex-left;
   }
 
   .test img{
-    width: 700px; /* Set the width of the image */
+    width: 700px; 
     height: 1000px;
     justify-content: flex-end; 
   }
@@ -82,7 +185,7 @@
   
   .gmail-button{
     display: flex;
-    justify-content: center; /* Center horizontally */
+    justify-content: center; 
     align-items: center; 
     width:285px;
     background-color: #000000; 
@@ -100,6 +203,6 @@
     margin-bottom:700px;
   }
   
-  
+   */
 
 
