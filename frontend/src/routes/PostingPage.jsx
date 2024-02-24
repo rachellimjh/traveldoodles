@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import "./PostingPage.css";
 import { FileUploader } from "react-drag-drop-files";
+import NavBar from "../components/NavBar";
+import { Base64 } from "js-base64";
 
 export default function PostingPage() {
   const [post, setPost] = useState({
@@ -64,55 +66,64 @@ export default function PostingPage() {
   };
 
   return (
-    <div className="grid-container">
-      <div className="left-grid">
-        <input
-          className="title-box"
-          onChange={handleTitle}
-          placeholder="Title"
-        />
-        {/* <img src="path/to/your/image.jpg" alt="Description of the image"></img> */}
-
-        <DragDrop className="dragdrop-box" />
-        <img alt="not found" width={"100px"} src={post.image} />
+    <>
+      <div className="out-nav-bar">
+        <NavBar className="nav-bar" />
       </div>
-      <div className="right-grid">
-        <select name="tag" id="tag" defaultValue="" required>
-          <option value="" disabled hidden>
-            Tag
-          </option>
-          <option value="truffleDoodles">TruffleDoodles</option>
-          <option value="jungleDoodles">JungleDoodles</option>
-          <option value="totoroDoodles">TotoroDoodles</option>
-          <option value="snoozerDoodles">SnoozerDoodles</option>
-          <option value="wonderDoodles">WonderDoodles</option>
-          <option value="studyDoodles">StudyDoodles</option>
-          <option value="fitDoodles">FitDoodles</option>
-        </select>
+      <div className="grid-container">
+        <div className="left-grid">
+          <input
+            className="title-box"
+            onChange={handleTitle}
+            placeholder="Title"
+          />
+          {/* <img src="path/to/your/image.jpg" alt="Description of the image"></img> */}
 
-        <input
-          className="location-box"
-          onChange={handleLocation}
-          placeholder="Location"
-        />
+          <DragDrop className="dragdrop-box" />
+          <img alt="not found" width={"100px"} src={post.image} />
+        </div>
+        <div className="right-grid">
+          <select name="tag" id="tag" defaultValue="" required>
+            <option value="" disabled hidden>
+              Tag
+            </option>
+            <option value="truffleDoodles">TruffleDoodles</option>
+            <option value="jungleDoodles">JungleDoodles</option>
+            <option value="totoroDoodles">TotoroDoodles</option>
+            <option value="snoozerDoodles">SnoozerDoodles</option>
+            <option value="wonderDoodles">WonderDoodles</option>
+            <option value="studyDoodles">StudyDoodles</option>
+            <option value="fitDoodles">FitDoodles</option>
+          </select>
 
-        <input className="date-box" onChange={handleDate} placeholder="Date" />
+          <input
+            className="location-box"
+            onChange={handleLocation}
+            placeholder="Location"
+          />
 
-        <input
-          className="description-box"
-          onChange={handleDescription}
-          placeholder="Description"
-        />
+          <input
+            className="date-box"
+            onChange={handleDate}
+            placeholder="Date"
+          />
 
-        <div className="buttons">
-          <button className="upload-button" onClick={handlePost}>
-            Upload
-          </button>
-          <button className="cancel-button" onClick={handleCancel}>
-            Cancel
-          </button>
+          <input
+            className="description-box"
+            onChange={handleDescription}
+            placeholder="Description"
+          />
+
+          <div className="buttons">
+            <button className="upload-button" onClick={handlePost}>
+              Upload
+            </button>
+            <button className="cancel-button" onClick={handleCancel}>
+              Cancel
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

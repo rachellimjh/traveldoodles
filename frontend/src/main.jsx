@@ -14,11 +14,23 @@ import PublicLayout from "./layouts/PublicLayout.jsx";
 import ProtectedLayout from "./layouts/ProtectLayout.jsx";
 import AuthLayout from "./layouts/AuthLayout.jsx";
 import PostingPage from "./routes/PostingPage.jsx";
+import HomePage from "./routes/HomePage.jsx";
+import LoginPage from "./routes/LoginPage.jsx";
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/", // New home page path
+    element: <HomePage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/post-page",
     element: <PostingPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/login",
+    element: <LoginPage />,
     errorElement: <ErrorPage />,
   },
 ]);
