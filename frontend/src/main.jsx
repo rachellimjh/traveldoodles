@@ -4,20 +4,28 @@ import App from './routes/App.jsx'
 import './index.css'
 import LoginPage from "./routes/LoginPage.jsx"
 import ErrorPage from './routes/ErrorPage.jsx'
+import ProfilePage from "./routes/ProfilePage.jsx"
+
 import {
   createBrowserRouter,
   createHashRouter,
   RouterProvider,
 } from "react-router-dom";
 
+
+
+
+
 const router = createHashRouter([
+  
   {
     path:"/",
-    element: <LoginPage />,
-    errorElement: <ErrorPage />,
-  }
+    element:<LoginPage/>,
+    errorElement:<ErrorPage/>,
+  },
 ]
-)
+);
+
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -25,5 +33,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <RouterProvider router={router} />
   </React.StrictMode>,
 )
+
 
 

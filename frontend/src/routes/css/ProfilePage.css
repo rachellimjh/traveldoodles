@@ -1,0 +1,49 @@
+
+body{
+    background-color: #D7E5CA;
+}
+
+.profile-wrapper{
+    align-content:center;
+    justify-content:center;
+    width:100%;
+}
+
+.profile-icon img{
+    width:20%;
+}
+
+.username{
+    margin-top:0%;
+}
+
+.arrow-btn{
+    width: 2vw;
+    height: 3.7vh;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; 
+    background-color: white;
+}
+.arrow-btn:hover {
+    background-color: #8EACCD;
+  }
+
+.arrow-btn img{
+    width: 2vw;
+    height: 3.5vh;
+   
+  
+}
+
+.group-input{
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; 
+    gap:10px;
+}
+
+
+
+
+

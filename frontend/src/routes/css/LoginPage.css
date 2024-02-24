@@ -1,9 +1,105 @@
-.outside-grid{
-    width:1200px;
-    height:1000px;
+ .outside-grid{
+    width: 1200px;
+    height:900px;
     display:grid;
     grid-template-columns: 1fr 1fr;
     align-content:center;
-
-    
 }
+
+
+.loginWrapper{
+    height:600px;
+    /* align-content:center; */
+    gap:30px;
+    margin-top:300px;
+    margin-bottom:auto
+} 
+
+.signin-btn{
+    margin-left:5px;
+    width:280px;
+    background-color: #000000; 
+    color: white;
+}
+
+.signin-btn:hover {
+    background-color: #8EACCD;
+  }
+
+.email-input {
+    margin-bottom: 10px; /* Adjust margin as needed */
+    margin-top:10px;
+    margin-left: 10px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  
+  .email-field {
+    margin-bottom: 20px; /* Adjust margin as needed */
+    margin-right:10px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .test {
+    display: flex;
+    justify-content: flex-left; /* Align items to the end */
+  }
+
+  .test img{
+    width: 700px; /* Set the width of the image */
+    height: 1000px;
+    justify-content: flex-end; 
+  }
+
+  .gmail{
+    width:20px;
+  }
+
+  
+  .gmail img{
+    width: 20px;
+    height: 20px;
+    margin-bottom:5px;
+    margin-top:7px;
+  }
+
+  .gmailbutton-wrapper{
+    
+    align-content: center;
+  }
+
+  .password-wrapper{
+    width: 400px;
+    margin-bottom:20px;
+    margin-left:35px;
+  }
+
+  .password-field{
+    margin-right:0px;
+  }
+
+  .password-box{
+    margin-right: 7px;
+  }
+  
+  .gmail-button{
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; 
+    width:285px;
+    background-color: #000000; 
+    color: white;
+    margin-left: 112px;
+  }
+
+  .gmail-button:hover {
+    background-color: #8EACCD;
+  }
+  
+  .navbar-wrapper{
+    position:absolute;
+    width: 1000px;
+    margin-bottom:700px;
+  }
+  
+  
+
+

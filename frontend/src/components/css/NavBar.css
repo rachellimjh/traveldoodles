@@ -99,6 +99,8 @@
   font-size: 16px;
   cursor: pointer;
   display: inline-block;
+  text-align:center;
+  outline: none;
 }
 
 
