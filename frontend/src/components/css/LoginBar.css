@@ -1,0 +1,90 @@
+.logo{
+    margin-left: 0px;
+  }
+  
+  .globe img{
+    width: 40px;
+    height: 40px;
+    margin-top:3px;
+  } */
+  
+  .navbar-wrapper{
+    position: absolute;
+    top: 2%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+  
+   
+  }
+  
+  /* .websitename{
+    width:35%;
+  } */
+  
+  /* .navbar-btns {
+    width: 60%;
+    height: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+  } */
+  
+  .navbar-btns{
+    font-family: 'JetBrains Mono', monospace;
+    justify-content: space-evenly;
+    width: 60%;
+    height: 40%;
+  }
+  
+  .navbar-btns button {
+    font-family: 'JetBrains Mono', monospace;
+    width: 15%; /* Set the width of each button to 20% */
+    /* Add additional styles for buttons if needed */
+    height:10%;
+    margin: 0 0px;
+    border: none;
+    background-color: inherit;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    text-align:center;
+    outline: none;
+  }
+  
+  
+  .globe img{
+    width: 40px;
+    height: 40px;
+    margin-bottom:0px;
+  }
+  
+  .globe{
+    width:20%;
+    height:20%
+  }
+  
+  .traveldoodles-wrapper{
+    font-family: 'JetBrains Mono', monospace;
+    display: flex;
+    align-items:center;
+  }
+  
+   .logo{
+    width:35%;
+    height:auto;
+    display:flex;
+    justify-content: flex-end;
+  }
+  
+  .traveldoodles-wrapper .websitename{
+    width:20%;
+  }
+  
+  .logo img{
+    width:40%;
+    height:auto;
+  }

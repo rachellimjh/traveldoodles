@@ -15,8 +15,9 @@
   font-family: 'JetBrains Mono', monospace;
     flex: 1 0 calc(33.33% - 10px); 
     margin: 20px; 
-    width: 300px; 
-    height: 200px; 
+    width: 350px; 
+    height: 250px; 
+    gap:5px;
 
 
 
@@ -24,7 +25,7 @@
 
   .fitimage {
     width: 100%; /* Ensure the image fills the entire width of the button */
-    height: 70%; /* Ensure the image fills the entire height of the button */
+    height: 50%; /* Ensure the image fills the entire height of the button */
     object-fit: cover; /* Fit the image inside the button while preserving its aspect ratio */
   }
 

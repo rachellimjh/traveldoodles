@@ -1,0 +1,25 @@
+/* .wrapper{
+    display:flex;
+
+    align-items: center;
+    justify-content:center;
+    height: max-content;
+    width: max-content;
+    gap:10px;
+} */
+
+.wrapper{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    width: 1000px;
+    height: 430px;
+}
+
+.left-wrapper{
+        justify-content:center;
+
+}
+
+.right-wrapper{
+    margin:0;
+}

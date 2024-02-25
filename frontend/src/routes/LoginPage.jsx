@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import "../routes/css/LoginPage.css";
 import LoginImage from "../../public/images/login.jpg"
 import newImage from "../../public/images/new.png"
-import NavBar from "../components/NavBar.jsx"
+import LoginBar from "../../src/components/LoginBar"
 import { useAuth } from "../hooks/AuthProvider";
 import DatabaseService from "../api/databaseService";
 import { useGoogleLogin } from "@react-oauth/google";
 import GoogleAPIService from "../api/googleAPIService";
 import { useNavigate, Link} from 'react-router-dom';
-
+import travel from "../../public/images/travel.png";
 
 export default function LoginPage() {
   const [userInput, setUserInput] = useState({
@@ -81,9 +81,11 @@ export default function LoginPage() {
   return(
     //D7E5CA
     <div className="half-image-container" style={{ backgroundColor: '#F9F3CC' }}>
-      {/* <div className="nav">
-        <NavBar />
-      </div> */}
+      <div className="nav">
+        <LoginBar/>
+      </div> 
+      
+      
     
       <div className="image-container">
         <img src={LoginImage} alt="Image" />
@@ -130,7 +132,7 @@ export default function LoginPage() {
       </div>
   
 </div>
-  )
+  );
 
 }
 

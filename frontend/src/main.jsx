@@ -10,14 +10,17 @@ import HomePage from "./routes/HomePage.jsx"
 import PostingPage from "./routes/PostingPage.jsx"
 import MapPage from "./routes/MapPage.jsx"
 import AboutPage from "./routes/AboutPage.jsx"
+import UploadedPage from "./routes/UploadedPage.jsx"
 import AuthLayout from './layouts/AuthLayout.jsx'
 import PublicLayout from './layouts/PublicLayout.jsx'
 import ProtectedLayout from './layouts/protectedLayout.jsx'
+
 import {
   createBrowserRouter,
   createHashRouter,
   RouterProvider,
 } from "react-router-dom";
+
 
 const router = createBrowserRouter([ {
   path: "/",
@@ -39,6 +42,7 @@ const router = createBrowserRouter([ {
         {path: "explorePage", element: <ExplorePage/>},
         {path: "profilePage", element: <ProfilePage/>},
         {path: "aboutPage", element: <AboutPage/>},
+        {path: "uploadedPage", element: <UploadedPage/>},
       ],
     },
   ],
