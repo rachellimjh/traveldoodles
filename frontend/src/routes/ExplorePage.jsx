@@ -55,7 +55,7 @@ export default function ExplorePage(){
 
             <button className="blog">
                 <p className="blog1">Title: Sightseeing treasures!</p>
-                <p>rachki</p>
+                <p>Rachel</p>
                 <p>#wonderdoodles</p>
                 <img className="fitimage" src={wonderImage} alt="jungimage"/>
             </button>

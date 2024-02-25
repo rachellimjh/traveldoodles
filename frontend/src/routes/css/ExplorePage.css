@@ -1,15 +1,14 @@
 .wrapper {
   font-family: 'JetBrains Mono', monospace;
-    display:flex;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    padding-top: 150px;
-    width:100vw;
-    height:auto;
-    
-  }
-
-
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center; /* Align grid items in the center horizontally */
+  align-items: center; /* Align grid items in the center vertically */
+  gap: 20px; /* Add gap between grid items */
+  padding-top: 150px;
+  width: 100vw;
+  height: auto;
+}
 
 .blog {
   font-family: 'JetBrains Mono', monospace;
