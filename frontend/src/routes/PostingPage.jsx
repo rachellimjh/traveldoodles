@@ -3,7 +3,9 @@ import { useState } from "react";
 import "./css/PostingPage.css";
 import { FileUploader } from "react-drag-drop-files";
 import NavBar from "../components/NavBar";
+import DatabaseService from "../api/databaseService";
 import { Base64 } from "js-base64";
+import { useNavigate, Link } from "react-router-dom";
 
 export default function PostingPage() {
   const [data, setData] = useState([]);
@@ -15,8 +17,10 @@ export default function PostingPage() {
     date: "",
     location: "",
     type: "",
+    postID: "",
   });
   const fileTypes = ["JPG", "PNG", "GIF"];
+  const navigate = useNavigate();
 
   function convertToBase64(e) {
     console.log(e);
@@ -77,21 +81,28 @@ export default function PostingPage() {
   const handleDescription = (event) => {
     setPost({ ...post, description: event.target.value });
   };
+  const handleType = (evnt) => {
+    setPost({ ...post, type: event.target.value });
+  };
   const handlePost = async () => {
+    // const newData = [...data, post];
+    // setData(newData);
     setData([...data, post]);
     console.log(post);
     try {
       const response = await DatabaseService.addPost(post);
       const response2 = await DatabaseService.getPost();
       setData(response2.data);
+      navigate("/Home");
     } catch (e) {
+      navigate("/Home");
       console.log(e);
     }
     //console.log(response.data)
   };
 
   const handleCancel = (event) => {
-    //go back to previous page
+    navigate("/Home");
   };
 
   return (
@@ -117,7 +128,13 @@ export default function PostingPage() {
           </div>
         </div>
         <div className="right-grid">
-          <select className="tag" id="tag" defaultValue="" required>
+          <select
+            className="tag"
+            id="tag"
+            defaultValue=""
+            required
+            onChange={handleType}
+          >
             <option value="" disabled hidden>
               Tag
             </option>
