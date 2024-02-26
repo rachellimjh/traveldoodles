@@ -14,11 +14,11 @@ const postSchema = new mongoose.Schema({
         type: String
     },
     username: {
-        required: true,
+        required: false,
         type: String
     },
     image: {
-        required: true,
+        required: false,
         type: String
     },
     date: {
@@ -30,7 +30,7 @@ const postSchema = new mongoose.Schema({
         type: String
     },
     postID: {
-        required: true,
+        required: false,
         type: String
     }
 })
